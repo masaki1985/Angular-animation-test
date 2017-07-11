@@ -9,6 +9,27 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
+  <style>
+    #waitIcon {
+      width: 100px;               /*アイコンの幅 100px*/
+      height: 100px;              /*アイコンの高さ 100px*/
+      background-color: blue;   /*アイコンの色 青*/
+      animation-name: frame;      /*キーフレーム定義名 fram*/
+      animation-duration: 3s;     /*アニメーションの繰り返し間隔 3秒*/
+      animation-timing-function: linear;    /*アニメーションのプロパティ変化　一定*/
+      animation-iteration-count: infinite;  /*アニメーションの繰り返し回数　無限*/
+    }
+
+    @keyframes frame {    /*キーフレームを定義*/
+      0% {                          /*時間経過0%(開始時)*/
+        transform: rotate(0deg);    /*アイコンの回転 0度*/
+      }
+      100% {                        /*時間経過100%(終了時)*/
+        transform: rotate(100deg);  /*アイコンの回転 360度*/
+      }
+    }
+  </style>
+  <div id="waitIcon"></div>
   <app-root></app-root>
 </body>
 </html>
